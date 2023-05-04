@@ -12,5 +12,28 @@ const tutorials = [
 ];
 
 const titleCased = () => {
-  return tutorials
+
+  let result = tutorials.map(function (element){
+   const words = element.split(" ");
+      const titleCaseWords =words.map(function(word){
+        return word.charAt(0).toUpperCase() + word.substring(1);
+      })
+      return titleCaseWords.join(' ');
+
+  })
+  return result
 }
+
+/*const titleCased = () => {
+  return tutorials.map(function (element) {
+    const words = element.split(" ");
+    const titleCaseWords = words.map(function (word) {
+      return word.charAt(0).toUpperCase() + word.substring(1);
+    });
+    return titleCaseWords.join(" ");
+  });
+};*/
+
+
+
+titleCased()
